@@ -1,3 +1,25 @@
+/************************* FP :: TERMS *******************************/
+1 - Pure Function :: 
+    - Given the same input, always returns the same output.
+    - Produces no side effects. // console.log is side effect.
+2 - Idempotent
+3 - Imperative vs Declarative :: example --> { Computser vs Human || fro vs foreach } 
+4 - Immutability (Structural Sharing) :: 
+5 - Currying ::
+  Example ::
+   //Currying
+   const multiply = (a, b) => a * b
+   const curriedMultiply = (a) => (b) => a * b
+   curriedMultiply(5)(20)
+   const multiplyBy5 = curriedMultiply(5)
+   multiplyBy5(20)
+   
+6 - Partial Application ::
+  Example ::
+    const multiply = (a, b, c) => a * b * c
+    const partialMultiplyBy5 = multiply.bind(null, 5)
+    partialMultiplyBy5(10, 20)
+7 - Compose && Pipe ::
 /*
 Reduce Example ::
 */
