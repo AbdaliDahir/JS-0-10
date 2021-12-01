@@ -1,30 +1,35 @@
 ## FP :: TERMS
-### 1 - Pure Function :: 
-    - Given the same input, always returns the same output.
-    - Produces no side effects. // console.log is side effect.
+### 1 - Pure Function  
+  - Given the same input, always returns the same output.
+  - Produces no side effects. // console.log is side effect.
 ### 2 - Idempotent
 ### 3 - Imperative vs Declarative :: example --> { Computser vs Human || fro vs foreach } 
 ### 4 - Immutability (Structural Sharing) :: 
-### 5 - Currying ::
-    Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c).
+#### 5 - Currying
+  > Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c).
     Currying doesn’t call a function. It just transforms it.
-  Example ::
+    
+ **Example**
+  ```
    //Currying
    const multiply = (a, b) => a * b
    const curriedMultiply = (a) => (b) => a * b
    curriedMultiply(5)(20)
    const multiplyBy5 = curriedMultiply(5)
    multiplyBy5(20)
-   
-### 6 - Partial Application ::
-  Example ::
+   ```
+#### 6 - Partial Application : :
+
+**Example**
+```
     const multiply = (a, b, c) => a * b * c
     const partialMultiplyBy5 = multiply.bind(null, 5)
     partialMultiplyBy5(10, 20)
-### 7 - Compose && Pipe ::
-/*
-##### Reduce Example ::
-*/
+ ```
+#### 7 - Compose && Pipe : :
+
+##### Reduce Example : :
+```
 const array1 = [1, 2, 3, 4];
 const reducer = (previousValue, currentValue) => previousValue + currentValue;
 
@@ -35,11 +40,11 @@ console.log(array1.reduce(reducer));
 // 5 + 1 + 2 + 3 + 4
 console.log(array1.reduce(reducer, 5));
 // expected output: 15
+```
 
-/*
-##### Functional Programing
-*/
+##### Functional Programing Demo : :
 
+```
 // compose
 const compose = (f,g) => (...args) => f(g(...args));
 // reduce
@@ -84,4 +89,4 @@ function buyItem(user) {
 function emptyUserCart(user) { 
   return Object.assign({}, user, { cart: [] });
 }
-
+```
