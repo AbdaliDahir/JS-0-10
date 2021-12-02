@@ -3,6 +3,20 @@
   - Given the same input, always returns the same output.
   - Produces no side effects. // console.log is side effect.
 ### 2 - Idempotent
+  - A function is said to be idempotent if it **returns the same output for the same input or does what we expect it to do** (predictable). Idempotence is different from pure function as it allows side effects.
+**Example**
+```
+  // even with same input it will give us diffrent output each time.
+  const random = (num) => Math.random(num);
+  random(5);
+  // we give it s am einput return some result always -- but it have side effect.
+  function numberFive(num) {
+    console.log(num);
+  }
+  numberFive(5);
+  //
+  Math.abs(Math.abs(5)) // Always return same result.
+```
 ### 3 - Imperative vs Declarative :: example --> { Computser vs Human || fro vs foreach } 
 ### 4 - Immutability (Structural Sharing) :: 
 #### 5 - Currying
