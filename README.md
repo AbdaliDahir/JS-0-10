@@ -32,7 +32,7 @@
 #### 5 - Currying
   > Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c).
     Currying doesn’t call a function. It just transforms it.
-    
+    - **Arity** : the number of arguments can function take.
  **Example**
   ```js 
    //Currying
