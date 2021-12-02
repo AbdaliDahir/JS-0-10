@@ -17,7 +17,8 @@
   //
   Math.abs(Math.abs(5)) // Always return same result.
 ```
-### 3 - Imperative vs Declarative :: example --> { Computser vs Human || fro vs foreach } 
+### 3 - Imperative(how to do things) vs Declarative(what to do) :: example --> { Computser vs Human || fro vs foreach } 
+  - imperative code is where you explicitly spell out each step of how you want something done, whereas with declarative code you merely say what it is that you want done.
 ### 4 - Immutability (Structural Sharing) :: 
 #### 5 - Currying
   > Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c).
@@ -32,6 +33,8 @@
    const multiplyBy5 = curriedMultiply(5)
    multiplyBy5(20)
    ```
+   [Currying in javascript](https://dev.to/cglikpo/currying-in-javascript-1jke)
+   
 #### 6 - Partial Application : :
 
 **Example**
