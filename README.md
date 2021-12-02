@@ -1,11 +1,11 @@
 ## FP :: TERMS
-### 1 - Pure Function  
+#### 1 - Pure Function  
   - Given the same input, always returns the same output.
   - Produces no side effects. // console.log is side effect.
-### 2 - Idempotent
+#### 2 - Idempotent
   - A function is said to be idempotent if it **returns the same output for the same input or does what we expect it to do** (predictable). Idempotence is different from pure function as it allows side effects.
 **Example**
-```
+```js
   // even with same input it will give us diffrent output each time.
   const random = (num) => Math.random(num);
   random(5);
@@ -17,28 +17,28 @@
   //
   Math.abs(Math.abs(5)) // Always return same result.
 ```
-### 3 - Imperative(how to do things) vs Declarative(what to do) :: example --> { Computser vs Human || fro vs foreach } 
+#### 3 - Imperative(how to do things) vs Declarative(what to do) :: example --> { Computser vs Human || fro vs foreach } 
   - imperative code is where you explicitly spell out each step of how you want something done, whereas with declarative code you merely say what it is that you want done.
-### 4 - Immutability (Structural Sharing) :: 
+#### 4 - Immutability (Structural Sharing) :: 
 #### 5 - Currying
   > Currying is a transformation of functions that translates a function from callable as f(a, b, c) into callable as f(a)(b)(c).
     Currying doesn’t call a function. It just transforms it.
     
  **Example**
-  ```
+  ```js 
    //Currying
    const multiply = (a, b) => a * b
    const curriedMultiply = (a) => (b) => a * b
    curriedMultiply(5)(20)
    const multiplyBy5 = curriedMultiply(5)
    multiplyBy5(20)
-   ```
-   [Currying in javascript](https://dev.to/cglikpo/currying-in-javascript-1jke)
+```
+[Currying in javascript](https://dev.to/cglikpo/currying-in-javascript-1jke)
    
 #### 6 - Partial Application : :
 
 **Example**
-```
+```js
     const multiply = (a, b, c) => a * b * c
     const partialMultiplyBy5 = multiply.bind(null, 5)
     partialMultiplyBy5(10, 20)
@@ -46,7 +46,7 @@
 #### 7 - Compose && Pipe : :
 
 ##### Reduce Example : :
-```
+```js
 const array1 = [1, 2, 3, 4];
 const reducer = (previousValue, currentValue) => previousValue + currentValue;
 
@@ -61,7 +61,7 @@ console.log(array1.reduce(reducer, 5));
 
 ##### Functional Programing Demo : :
 
-```
+```js
 // compose
 const compose = (f,g) => (...args) => f(g(...args));
 // reduce
