@@ -17,14 +17,14 @@
   //
   Math.abs(Math.abs(5)) // Always return same result.
 ```
-#### 3 - Imperative(how to do things) vs Declarative(what to do) :: example --> { Computser vs Human || fro vs foreach } 
+#### 3 - Imperative(how to do things - OOP) vs Declarative(what to do -- FP) :: example --> { Computser vs Human || fro vs foreach } 
   - imperative code is where you explicitly spell out each step of how you want something done, whereas with declarative code you merely say what it is that you want done.
 #### 4 - Immutability
    - **Mutable** : is a type of variable that can be changed. In JavaScript, only objects and arrays are mutable, not primitive values. (You can make a variable name point to a new value, but the previous value is still held in memory. Hence the need for garbage collection.) A mutable object is an object whose state can be modified after it is created.
    - **Immutables** : are the objects/arrays whose state cannot be changed once the object is created.
    - **NOTE** : so how we can change it ?? copying is bad idea because it is not efficient neither with respect of time/space, So there is structural sharing tree/trie (data structure) more performant.
   - **Immutable vs persistent** : persistent we have kind of trace for old versions (we can access old versions -- stay arround).
-  - **partiale persistent data structure** : we can back and check old versions witouth update. all what we can update is last version.
+  - **partiale persistent data structure** : we can back and check old versions without update. all what we can update is last version.
   - **fully persistent data structure** : we can back and update any of past version.
   - **Structural Sharing** : concept related to Immutability -- we share structure of tree between multi version
   - **Libs to implement** : mori - immutablejs (facebook) - 
