@@ -44,7 +44,7 @@
 If we talk about the frontend library React, Vue os state management library Redux then immutability can also help achieve better performance by enabling quick and cheap comparisons between versions of the state before and after changes. Components can take advantage of this and intelligently re-render itself only when needed. This can significantly boost performance. 
 The main benefits of immutability are predictability, performance, and better mutation tracking.
 
-  **1. Predictability :: **
+**1. Predictability ::**
 In any application when we work on some front-end libraries, we declare a lot of state in it. We perform the asynchronous action and it updates the original state (mutation). Once the end-user starts using it the updated state will be significantly different from the initial state. Mutating the state hides changes and it creates side effects that can cause several bugs. Debugging becomes hard in such cases.
 When you keep your application architecture immutable and mental model simple it becomes easier to predict the data in the state at any given time and then you can rest assured that it won’t create any nasty side effects. 
 
@@ -52,7 +52,7 @@ When you keep your application architecture immutable and mental model simple it
 Creating an immutable object cost memory. How? When you add value to an immutable object you need to create a new object and in this new object, you copy the existing value with the new value which requires additional memory. To reduce memory consumption we use structural sharing.
 Whatever update we make it returns new values, but we share the structures internally to reduce memory consumption. For example, if you append to a vector with 100 elements, it doesn’t create a new vector 101 elements long. Only a few small objects are allocated internally.
 
-**3. Mutation Tracking :: **
+**3. Mutation Tracking ::**
 One of the advantages of immutability is that you can optimize your application by making use of reference and value equality. This makes it easy to identify if anything has changed. You can consider the example of state change in the React component. shouldComponentUpdate can be used to check if the state is identical comparing the state object and preventing it from unnecessary rendering. 
 Immutability allows you to track the changes that happen to these objects like a chain of events. Variables have new references that are easy to track compared to existing variables. This helps in debugging the code and building the concurrent application. Also, event debuggers help you to replay DOM events with video playbacks that work on tracking mutation. 
 
